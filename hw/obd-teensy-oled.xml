@@ -1,0 +1,1243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/brian/obd-teensy-oled/obd-teensy-oled.sch</source>
+    <date>Tue 03 Dec 2019 10:40:05 PM EST</date>
+    <tool>Eeschema 5.1.5</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>obd-teensy-oled.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="U2">
+      <value>MCP2551-I_SN</value>
+      <footprint>digikey-footprints:SOIC-8_W3.9mm</footprint>
+      <datasheet>http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en011797</datasheet>
+      <fields>
+        <field name="Category">Integrated Circuits (ICs)</field>
+        <field name="DK_Datasheet_Link">http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en011797</field>
+        <field name="DK_Detail_Page">/product-detail/en/microchip-technology/MCP2551-I-SN/MCP2551-I-SN-ND/509452</field>
+        <field name="Description">IC TRANSCEIVER CAN HI-SPD 8-SOIC</field>
+        <field name="Digi-Key_PN">MCP2551-I/SN-ND</field>
+        <field name="Family">Interface - Drivers, Receivers, Transceivers</field>
+        <field name="MPN">MCP2551-I/SN</field>
+        <field name="Manufacturer">Microchip Technology</field>
+        <field name="Status">Active</field>
+      </fields>
+      <libsource lib="dk_Interface-Drivers-Receivers-Transceivers" part="MCP2551-I_SN" description="IC TRANSCEIVER CAN HI-SPD 8-SOIC"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DDC7610</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>OBDII</value>
+      <footprint>Connectors:OBDII</footprint>
+      <fields>
+        <field name="Field4">DEV-09911</field>
+      </fields>
+      <libsource lib="SparkFun-Connectors" part="OBDII" description="OBD-II Connector OBDII is an on board diagnostics standard that is used on a large variety of cars.  &lt;b&gt;Here is the connector we sell at SparkFun:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://www.sparkfun.com/products/9911&quot;&gt;OBD-II connector&lt;/a&gt; (DEV-09911)&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://pinoutsguide.com/CarElectronics/car_obd2_pinout.shtml&quot;&gt;Info and Pinout&lt;/a&gt; (sorry, no datasheet)&lt;/li&gt;&lt;/ul&gt; &lt;b&gt;We do not use this connector on any active designs, however, if you're looking for OBDII tech, please check out these:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://www.sparkfun.com/search/results?term=obd&quot;&gt;SparkFun OBD related products&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DDC9443</tstamp>
+    </comp>
+    <comp ref="D2">
+      <value>1N4007-T_NRND</value>
+      <footprint>digikey-footprints:DO-41</footprint>
+      <datasheet>https://www.diodes.com/assets/Datasheets/ds28002.pdf</datasheet>
+      <fields>
+        <field name="Category">Discrete Semiconductor Products</field>
+        <field name="DK_Datasheet_Link">https://www.diodes.com/assets/Datasheets/ds28002.pdf</field>
+        <field name="DK_Detail_Page">/product-detail/en/diodes-incorporated/1N4007-T/1N4007DICT-ND/76454</field>
+        <field name="Description">DIODE GEN PURP 1KV 1A DO41</field>
+        <field name="Digi-Key_PN">1N4007DICT-ND</field>
+        <field name="Family">Diodes - Rectifiers - Single</field>
+        <field name="MPN">1N4007-T</field>
+        <field name="Manufacturer">Diodes Incorporated</field>
+        <field name="Status">Not For New Designs</field>
+      </fields>
+      <libsource lib="dk_Diodes-Rectifiers-Single" part="1N4007-T_NRND" description="DIODE GEN PURP 1KV 1A DO41"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DE09084</tstamp>
+    </comp>
+    <comp ref="U4">
+      <value>TPS563200DDCR</value>
+      <footprint>digikey-footprints:SOT-23-6</footprint>
+      <libsource lib="brian-custom" part="TPS563200DDCR" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DE1E69D</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>22uF</value>
+      <footprint>1210</footprint>
+      <fields>
+        <field name="Field4">XXX-00000</field>
+      </fields>
+      <libsource lib="SparkFun-Capacitors" part="22UF-1210-16V-20%" description="22uF ceramic capacitors A capacitor is a passive two-terminal electrical component used to store electrical energy temporarily in an electric field."/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DE21DA5</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>56.2k</value>
+      <footprint>0603</footprint>
+      <fields>
+        <field name="Field4"> </field>
+      </fields>
+      <libsource lib="SparkFun-Resistors" part="RESISTOR0603" description="Generic Resistor Package"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DE2AA43</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>0.1uF</value>
+      <footprint>0603</footprint>
+      <fields>
+        <field name="Field4">CAP-08604</field>
+      </fields>
+      <libsource lib="SparkFun-Capacitors" part="0.1UF-0603-25V-5%" description="0.1uF ceramic capacitors A capacitor is a passive two-terminal electrical component used to store electrical energy temporarily in an electric field."/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DE2BDF4</tstamp>
+    </comp>
+    <comp ref="L1">
+      <value>4.7uH</value>
+      <footprint>brian-custom:IHLP2020BZER4R7M11</footprint>
+      <libsource lib="brian-custom" part="IHLP2020BZER4R7M11" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DE7FDA3</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>10.0k</value>
+      <footprint>0603</footprint>
+      <fields>
+        <field name="Field4"> </field>
+      </fields>
+      <libsource lib="SparkFun-Resistors" part="RESISTOR0603" description="Generic Resistor Package"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DE2D507</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>47uF</value>
+      <footprint>1210</footprint>
+      <fields>
+        <field name="Field4">CAP-09824</field>
+      </fields>
+      <libsource lib="SparkFun-Capacitors" part="10UF-1210-50V-20%" description="10.0uF ceramic capacitors A capacitor is a passive two-terminal electrical component used to store electrical energy temporarily in an electric field."/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DEC416F</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>1k-DNP</value>
+      <footprint>0603</footprint>
+      <fields>
+        <field name="Field4"> </field>
+      </fields>
+      <libsource lib="SparkFun-Resistors" part="RESISTOR0603" description="Generic Resistor Package"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DEC7DB5</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>1k</value>
+      <footprint>0603</footprint>
+      <fields>
+        <field name="Field4"> </field>
+      </fields>
+      <libsource lib="SparkFun-Resistors" part="RESISTOR0603" description="Generic Resistor Package"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DEC7DBC</tstamp>
+    </comp>
+    <comp ref="U5">
+      <value>NEO-M8T</value>
+      <footprint>RF_GPS:ublox_NEO</footprint>
+      <datasheet>https://www.u-blox.com/sites/default/files/NEO-LEA-M8T-FW3_DataSheet_%28UBX-15025193%29.pdf</datasheet>
+      <libsource lib="RF_GPS" part="NEO-M8T" description="GNSS Module NEO M8, VCC 2.7V to 3.6V"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DF03982</tstamp>
+    </comp>
+    <comp ref="U3">
+      <value>Teensy4.0</value>
+      <footprint>teensy:Teensy40</footprint>
+      <libsource lib="teensy" part="Teensy4.0" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DF1375B</tstamp>
+    </comp>
+    <comp ref="BT1">
+      <value>BATTERY-6.8MM_SMD</value>
+      <footprint>BATTCON-6.8MM</footprint>
+      <fields>
+        <field name="Field4">BATT-13734</field>
+      </fields>
+      <libsource lib="SparkFun-Batteries" part="BATTERY-6.8MM_SMD" description="Battery - Single Cell A variety of battery chemistries, sizes, and footprints. Device List:&lt;ul&gt;&lt;li&gt;&lt;b&gt;20MM_PTH - &lt;/b&gt; &lt;a href=&quot;https://www.sparkfun.com/products/783&quot;&gt;Coin Cell Battery Holder - 20mm (PTH)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;6.8MM_PTH - &lt;/b&gt; &lt;a href=&quot;https://www.digikey.com/product-detail/en/seiko-instruments/MS621FE-FL11E/728-1057-ND/1889208?WT.srch=1&amp;gclid=CNOQ5a6LzdQCFZS2wAodXCkE0g&quot;&gt;Coin Cell Battery Holder - 6.8MM(SMD)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;12MM_SMD - &lt;/b&gt; &lt;a href=&quot;https://www.sparkfun.com/products/10592&quot;&gt;Coin Cell Battery Holder - 12mm (SMD)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;12MM_PTH - &lt;/b&gt;&lt;a href=&quot;https://www.sparkfun.com/products/7948&quot;&gt;Coin Cell Battery Holder - 12mm (PTH)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;20MM_SMD - &lt;/b&gt; 20mm Coin Cell Battery Holder (SMD) (2 legs)&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Used on the &lt;a href=&quot;https://www.sparkfun.com/products/11734&quot;&gt;Big Time Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;&lt;b&gt;20MM_SMD_4LEGS - &lt;/b&gt; &lt;a href=&quot;https://www.sparkfun.com/products/11892&quot;&gt;Coin Cell Battery Holder - 20mm (SMD)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;20MM_SMD_4LEGS_OVERPASTE - &lt;/b&gt; &lt;a href=&quot;https://www.sparkfun.com/products/11892&quot;&gt;Coin Cell Battery Holder - 20mm (SMD)&lt;/a&gt; (Over-paste on the legs)&lt;/li&gt;&lt;li&gt;&lt;b&gt;24.5MM_PTH - &lt;/b&gt; &lt;a href=&quot;https://www.sparkfun.com/products/8863&quot;&gt;Coin Cell Battery Holder - 24.5mm (PTH)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;9V - &lt;/b&gt; 9V Battery Holder - PC Mount &lt;/li&gt;&lt;ul&gt;&lt;li&gt;Used on the &lt;a href=&quot;https://www.sparkfun.com/products/11177&quot;&gt;SparkFun SparkPunk Sound Kit &lt;/a&gt; and &lt;a href=&quot;https://www.sparkfun.com/products/12707&quot;&gt;SparkFun SparkPunk Sequencer Kit &lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;&lt;b&gt;18650 - &lt;/b&gt; &lt;a href=&quot;https://www.sparkfun.com/products/13113&quot;&gt;Battery Holder - 18650 (PTH)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;AA - &lt;/b&gt; &lt;a href=&quot;https://www.sparkfun.com/products/7949&quot;&gt;Battery Holder - 1xAA (PTH)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;AAA - &lt;/b&gt; &lt;a href=&quot;https://www.sparkfun.com/products/12718&quot;&gt;Battery Holder - 1xAAA (PTH)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;AA_KIT - &lt;/b&gt; &lt;a href=&quot;https://www.sparkfun.com/products/7949&quot;&gt;Battery Holder - 1xAA (PTH)&lt;/a&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Special kit package - pads only have exposed copper on one side of the board.&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;&lt;b&gt;AAA_KIT - &lt;/b&gt; &lt;a href=&quot;https://www.sparkfun.com/products/12718&quot;&gt;Battery Holder - 1xAAA (PTH)&lt;/a&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Special kit package - pads only have exposed copper on one side of the board.&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DFBDE65</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>0-DNP</value>
+      <footprint>0603</footprint>
+      <fields>
+        <field name="Field4"> </field>
+      </fields>
+      <libsource lib="SparkFun-Resistors" part="RESISTOR0603" description="Generic Resistor Package"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DFD501A</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>SN65HVDA195QDRQ1</value>
+      <footprint>SN65HVDA195QDRQ1:SN65HVDA195QDRQ1</footprint>
+      <libsource lib="SN65HVDA195QDRQ1" part="SN65HVDA195QDRQ1" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DDCD934</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>0-DNP</value>
+      <footprint>0603</footprint>
+      <fields>
+        <field name="Field4"> </field>
+      </fields>
+      <libsource lib="SparkFun-Resistors" part="RESISTOR0603" description="Generic Resistor Package"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E0F24CD</tstamp>
+    </comp>
+    <comp ref="R10">
+      <value>120-DNP</value>
+      <footprint>0603</footprint>
+      <fields>
+        <field name="Field4"> </field>
+      </fields>
+      <libsource lib="SparkFun-Resistors" part="RESISTOR0603" description="Generic Resistor Package"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E167B54</tstamp>
+    </comp>
+    <comp ref="FB1">
+      <value>FERRITE_BEAD-0603</value>
+      <footprint>0603</footprint>
+      <fields>
+        <field name="Field4">NDUC-07859</field>
+      </fields>
+      <libsource lib="SparkFun-Coils" part="FERRITE_BEAD-0603" description="Ferrite Bead (blocks, cores, rings, chokes, etc.) Inductor with layers of ferrite used to suppress high frequencies. Often used to isolate high frequency noise. SparkFun Products:&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://www.sparkfun.com/products/13613&quot;&gt;IOIO-OTG - V2.2&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://www.sparkfun.com/products/13664&quot;&gt;SparkFun SAMD21 Mini Breakout&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://www.sparkfun.com/products/13339&quot;&gt;SparkFun 6 Degrees of Freedom Breakout - LSM6DS3&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://www.sparkfun.com/products/13672&quot;&gt;SparkFun SAMD21 Dev Breakout&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E173B7E</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>1k</value>
+      <footprint>0603</footprint>
+      <fields>
+        <field name="Field4"> </field>
+      </fields>
+      <libsource lib="SparkFun-Resistors" part="RESISTOR0603" description="Generic Resistor Package"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DE12EEB</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>0-DNP</value>
+      <footprint>0603</footprint>
+      <fields>
+        <field name="Field4"> </field>
+      </fields>
+      <libsource lib="SparkFun-Resistors" part="RESISTOR0603" description="Generic Resistor Package"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DDEC358</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>0</value>
+      <footprint>0603</footprint>
+      <fields>
+        <field name="Field4"> </field>
+      </fields>
+      <libsource lib="SparkFun-Resistors" part="RESISTOR0603" description="Generic Resistor Package"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DDF157D</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>5V</value>
+      <footprint>LED-0603</footprint>
+      <fields>
+        <field name="Field4">DIO-00819</field>
+      </fields>
+      <libsource lib="SparkFun-LED" part="LED-RED0603" description="Red SMD LED Used in manufacturing of most products at SparkFun &lt;b&gt;Packages:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;0603&lt;/b&gt; - SMD 0603 package &lt;a href=&quot;http://docs.avagotech.com/docs/AV02-0551EN&quot;&gt;[Product Link]&lt;/li&gt;&lt;li&gt;&lt;b&gt;0603 SMART&lt;/b&gt; - SMD 0603 SMART package ( more efficient and expensive)&lt;a href=&quot;http://www.osram-os.com/Graphics/XPic2/00077099_0.pdf&quot;&gt;[Product Link]&lt;/li&gt;&lt;li&gt;&lt;b&gt; 1206&lt;/b&gt; - SMD1206  package &lt;a href=&quot;https://www.sparkfun.com/datasheets/DevTools/LilyPad/Q150OVS4.pdff&quot;&gt;[Product Link]&lt;/li&gt;&lt;ul&gt; &lt;b&gt;SparkFun Products:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;&lt;a href= https://www.sparkfun.com/products/821 &gt;Pro Mini 328 -5V&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href= https://www.sparkfun.com/products/12757 &gt;RedBoard&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href= https://www.sparkfun.com/products/13613 &gt;IOIO-OTG&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E2BCF82</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>1k</value>
+      <footprint>0603</footprint>
+      <fields>
+        <field name="Field4"> </field>
+      </fields>
+      <libsource lib="SparkFun-Resistors" part="RESISTOR0603" description="Generic Resistor Package"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E2C19AA</tstamp>
+    </comp>
+    <comp ref="D3">
+      <value>PWR_EN</value>
+      <footprint>LED-0603</footprint>
+      <fields>
+        <field name="Field4">DIO-00819</field>
+      </fields>
+      <libsource lib="SparkFun-LED" part="LED-RED0603" description="Red SMD LED Used in manufacturing of most products at SparkFun &lt;b&gt;Packages:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;0603&lt;/b&gt; - SMD 0603 package &lt;a href=&quot;http://docs.avagotech.com/docs/AV02-0551EN&quot;&gt;[Product Link]&lt;/li&gt;&lt;li&gt;&lt;b&gt;0603 SMART&lt;/b&gt; - SMD 0603 SMART package ( more efficient and expensive)&lt;a href=&quot;http://www.osram-os.com/Graphics/XPic2/00077099_0.pdf&quot;&gt;[Product Link]&lt;/li&gt;&lt;li&gt;&lt;b&gt; 1206&lt;/b&gt; - SMD1206  package &lt;a href=&quot;https://www.sparkfun.com/datasheets/DevTools/LilyPad/Q150OVS4.pdff&quot;&gt;[Product Link]&lt;/li&gt;&lt;ul&gt; &lt;b&gt;SparkFun Products:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;&lt;a href= https://www.sparkfun.com/products/821 &gt;Pro Mini 328 -5V&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href= https://www.sparkfun.com/products/12757 &gt;RedBoard&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href= https://www.sparkfun.com/products/13613 &gt;IOIO-OTG&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E2DB2D0</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>2.2k</value>
+      <footprint>0603</footprint>
+      <fields>
+        <field name="Field4"> </field>
+      </fields>
+      <libsource lib="SparkFun-Resistors" part="RESISTOR0603" description="Generic Resistor Package"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E2DB2D7</tstamp>
+    </comp>
+    <comp ref="D4">
+      <value>KLINE</value>
+      <footprint>LED-0603</footprint>
+      <fields>
+        <field name="Field4">DIO-00819</field>
+      </fields>
+      <libsource lib="SparkFun-LED" part="LED-RED0603" description="Red SMD LED Used in manufacturing of most products at SparkFun &lt;b&gt;Packages:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;0603&lt;/b&gt; - SMD 0603 package &lt;a href=&quot;http://docs.avagotech.com/docs/AV02-0551EN&quot;&gt;[Product Link]&lt;/li&gt;&lt;li&gt;&lt;b&gt;0603 SMART&lt;/b&gt; - SMD 0603 SMART package ( more efficient and expensive)&lt;a href=&quot;http://www.osram-os.com/Graphics/XPic2/00077099_0.pdf&quot;&gt;[Product Link]&lt;/li&gt;&lt;li&gt;&lt;b&gt; 1206&lt;/b&gt; - SMD1206  package &lt;a href=&quot;https://www.sparkfun.com/datasheets/DevTools/LilyPad/Q150OVS4.pdff&quot;&gt;[Product Link]&lt;/li&gt;&lt;ul&gt; &lt;b&gt;SparkFun Products:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;&lt;a href= https://www.sparkfun.com/products/821 &gt;Pro Mini 328 -5V&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href= https://www.sparkfun.com/products/12757 &gt;RedBoard&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href= https://www.sparkfun.com/products/13613 &gt;IOIO-OTG&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E2DE9AB</tstamp>
+    </comp>
+    <comp ref="R13">
+      <value>2,2k</value>
+      <footprint>0603</footprint>
+      <fields>
+        <field name="Field4"> </field>
+      </fields>
+      <libsource lib="SparkFun-Resistors" part="RESISTOR0603" description="Generic Resistor Package"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E2DE9B2</tstamp>
+    </comp>
+    <comp ref="D5">
+      <value>MCU_D7</value>
+      <footprint>LED-0603</footprint>
+      <fields>
+        <field name="Field4">DIO-00819</field>
+      </fields>
+      <libsource lib="SparkFun-LED" part="LED-RED0603" description="Red SMD LED Used in manufacturing of most products at SparkFun &lt;b&gt;Packages:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;0603&lt;/b&gt; - SMD 0603 package &lt;a href=&quot;http://docs.avagotech.com/docs/AV02-0551EN&quot;&gt;[Product Link]&lt;/li&gt;&lt;li&gt;&lt;b&gt;0603 SMART&lt;/b&gt; - SMD 0603 SMART package ( more efficient and expensive)&lt;a href=&quot;http://www.osram-os.com/Graphics/XPic2/00077099_0.pdf&quot;&gt;[Product Link]&lt;/li&gt;&lt;li&gt;&lt;b&gt; 1206&lt;/b&gt; - SMD1206  package &lt;a href=&quot;https://www.sparkfun.com/datasheets/DevTools/LilyPad/Q150OVS4.pdff&quot;&gt;[Product Link]&lt;/li&gt;&lt;ul&gt; &lt;b&gt;SparkFun Products:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;&lt;a href= https://www.sparkfun.com/products/821 &gt;Pro Mini 328 -5V&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href= https://www.sparkfun.com/products/12757 &gt;RedBoard&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href= https://www.sparkfun.com/products/13613 &gt;IOIO-OTG&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E30C5DB</tstamp>
+    </comp>
+    <comp ref="R14">
+      <value>390</value>
+      <footprint>0603</footprint>
+      <fields>
+        <field name="Field4"> </field>
+      </fields>
+      <libsource lib="SparkFun-Resistors" part="RESISTOR0603" description="Generic Resistor Package"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E30C5E2</tstamp>
+    </comp>
+    <comp ref="D6">
+      <value>MCU_D6</value>
+      <footprint>LED-0603</footprint>
+      <fields>
+        <field name="Field4">DIO-00819</field>
+      </fields>
+      <libsource lib="SparkFun-LED" part="LED-RED0603" description="Red SMD LED Used in manufacturing of most products at SparkFun &lt;b&gt;Packages:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;0603&lt;/b&gt; - SMD 0603 package &lt;a href=&quot;http://docs.avagotech.com/docs/AV02-0551EN&quot;&gt;[Product Link]&lt;/li&gt;&lt;li&gt;&lt;b&gt;0603 SMART&lt;/b&gt; - SMD 0603 SMART package ( more efficient and expensive)&lt;a href=&quot;http://www.osram-os.com/Graphics/XPic2/00077099_0.pdf&quot;&gt;[Product Link]&lt;/li&gt;&lt;li&gt;&lt;b&gt; 1206&lt;/b&gt; - SMD1206  package &lt;a href=&quot;https://www.sparkfun.com/datasheets/DevTools/LilyPad/Q150OVS4.pdff&quot;&gt;[Product Link]&lt;/li&gt;&lt;ul&gt; &lt;b&gt;SparkFun Products:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;&lt;a href= https://www.sparkfun.com/products/821 &gt;Pro Mini 328 -5V&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href= https://www.sparkfun.com/products/12757 &gt;RedBoard&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href= https://www.sparkfun.com/products/13613 &gt;IOIO-OTG&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E30C5EA</tstamp>
+    </comp>
+    <comp ref="R15">
+      <value>390</value>
+      <footprint>0603</footprint>
+      <fields>
+        <field name="Field4"> </field>
+      </fields>
+      <libsource lib="SparkFun-Resistors" part="RESISTOR0603" description="Generic Resistor Package"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E30C5F1</tstamp>
+    </comp>
+    <comp ref="D7">
+      <value>GPS_PPS2</value>
+      <footprint>LED-0603</footprint>
+      <fields>
+        <field name="Field4">DIO-00819</field>
+      </fields>
+      <libsource lib="SparkFun-LED" part="LED-RED0603" description="Red SMD LED Used in manufacturing of most products at SparkFun &lt;b&gt;Packages:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;0603&lt;/b&gt; - SMD 0603 package &lt;a href=&quot;http://docs.avagotech.com/docs/AV02-0551EN&quot;&gt;[Product Link]&lt;/li&gt;&lt;li&gt;&lt;b&gt;0603 SMART&lt;/b&gt; - SMD 0603 SMART package ( more efficient and expensive)&lt;a href=&quot;http://www.osram-os.com/Graphics/XPic2/00077099_0.pdf&quot;&gt;[Product Link]&lt;/li&gt;&lt;li&gt;&lt;b&gt; 1206&lt;/b&gt; - SMD1206  package &lt;a href=&quot;https://www.sparkfun.com/datasheets/DevTools/LilyPad/Q150OVS4.pdff&quot;&gt;[Product Link]&lt;/li&gt;&lt;ul&gt; &lt;b&gt;SparkFun Products:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;&lt;a href= https://www.sparkfun.com/products/821 &gt;Pro Mini 328 -5V&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href= https://www.sparkfun.com/products/12757 &gt;RedBoard&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href= https://www.sparkfun.com/products/13613 &gt;IOIO-OTG&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E30C5F9</tstamp>
+    </comp>
+    <comp ref="R16">
+      <value>390</value>
+      <footprint>0603</footprint>
+      <fields>
+        <field name="Field4"> </field>
+      </fields>
+      <libsource lib="SparkFun-Resistors" part="RESISTOR0603" description="Generic Resistor Package"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E30C600</tstamp>
+    </comp>
+    <comp ref="J3">
+      <value>142-0701-801</value>
+      <footprint>digikey-footprints:RF_SMA_BoardEdge_142-0701-801</footprint>
+      <datasheet>http://www.belfuse.com/resources/Johnson/drawings/dr-1420701801.pdf</datasheet>
+      <fields>
+        <field name="Category">Connectors, Interconnects</field>
+        <field name="DK_Datasheet_Link">http://www.belfuse.com/resources/Johnson/drawings/dr-1420701801.pdf</field>
+        <field name="DK_Detail_Page">/product-detail/en/cinch-connectivity-solutions-johnson/142-0701-801/J502-ND/35280</field>
+        <field name="Description">CONN SMA JACK STR 50OHM EDGE MNT</field>
+        <field name="Digi-Key_PN">J502-ND</field>
+        <field name="Family">Coaxial Connectors (RF)</field>
+        <field name="MPN">142-0701-801</field>
+        <field name="Manufacturer">Cinch Connectivity Solutions Johnson</field>
+        <field name="Status">Active</field>
+      </fields>
+      <libsource lib="dk_Coaxial-Connectors-RF" part="142-0701-801" description="CONN SMA JACK STR 50OHM EDGE MNT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5DF07947</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>Conn_01x14_Male</value>
+      <footprint>Connector_Molex:Molex_PicoBlade_53048-1410_1x14_P1.25mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x14_Male" description="Generic connector, single row, 01x14, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E5F1E9F</tstamp>
+    </comp>
+    <comp ref="J4">
+      <value>Conn_01x08_Male</value>
+      <footprint>Connector_Molex:Molex_PicoBlade_53047-0810_1x08_P1.25mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x08_Male" description="Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5E5F38A9</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="Conn_01x08_Male">
+      <description>Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x08_Male</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_01x14_Male">
+      <description>Generic connector, single row, 01x14, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x14_Male</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+        <pin num="11" name="Pin_11" type="passive"/>
+        <pin num="12" name="Pin_12" type="passive"/>
+        <pin num="13" name="Pin_13" type="passive"/>
+        <pin num="14" name="Pin_14" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="RF_GPS" part="NEO-M8T">
+      <description>GNSS Module NEO M8, VCC 2.7V to 3.6V</description>
+      <docs>https://www.u-blox.com/sites/default/files/NEO-LEA-M8T-FW3_DataSheet_%28UBX-15025193%29.pdf</docs>
+      <footprints>
+        <fp>ublox*NEO*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">NEO-M8T</field>
+        <field name="Footprint">RF_GPS:ublox_NEO</field>
+      </fields>
+      <pins>
+        <pin num="1" name="TP2/~SAFEBOOT" type="BiDi"/>
+        <pin num="2" name="D_SEL" type="input"/>
+        <pin num="3" name="TIMEPULSE" type="output"/>
+        <pin num="4" name="EXTINT0" type="input"/>
+        <pin num="5" name="USB_DM" type="BiDi"/>
+        <pin num="6" name="USB_DP" type="BiDi"/>
+        <pin num="7" name="VDD_USB" type="power_in"/>
+        <pin num="8" name="~RESET" type="input"/>
+        <pin num="9" name="VCC_RF" type="power_out"/>
+        <pin num="10" name="GND" type="power_in"/>
+        <pin num="11" name="RF_IN" type="input"/>
+        <pin num="12" name="GND" type="passive"/>
+        <pin num="13" name="GND" type="passive"/>
+        <pin num="14" name="LNA_EN" type="output"/>
+        <pin num="15" name="EXTINT1" type="input"/>
+        <pin num="16" name="RESERVED" type="NotConnected"/>
+        <pin num="17" name="RESERVED" type="NotConnected"/>
+        <pin num="18" name="SDA/~SPI_CS" type="BiDi"/>
+        <pin num="19" name="SCL/SPI_CLK" type="input"/>
+        <pin num="20" name="TXD/SPI_MISO" type="output"/>
+        <pin num="21" name="RXD/SPI_MOSI" type="input"/>
+        <pin num="22" name="V_BCKP" type="power_in"/>
+        <pin num="23" name="VCC" type="power_in"/>
+        <pin num="24" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SN65HVDA195QDRQ1" part="SN65HVDA195QDRQ1">
+      <footprints>
+        <fp>D8</fp>
+        <fp>D8-M</fp>
+        <fp>D8-L</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">SN65HVDA195QDRQ1</field>
+        <field name="Footprint">SN65HVDA195QDRQ1:SN65HVDA195QDRQ1</field>
+      </fields>
+      <pins>
+        <pin num="1" name="RXD" type="output"/>
+        <pin num="2" name="EN" type="input"/>
+        <pin num="3" name="NWAKE" type="input"/>
+        <pin num="4" name="TXD" type="input"/>
+        <pin num="5" name="GND" type="power_in"/>
+        <pin num="6" name="LIN" type="input"/>
+        <pin num="7" name="VREF" type="power_in"/>
+        <pin num="8" name="INH" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="SparkFun-Batteries" part="BATTERY-6.8MM_SMD">
+      <description>Battery - Single Cell A variety of battery chemistries, sizes, and footprints. Device List:&lt;ul&gt;&lt;li&gt;&lt;b&gt;20MM_PTH - &lt;/b&gt; &lt;a href="https://www.sparkfun.com/products/783"&gt;Coin Cell Battery Holder - 20mm (PTH)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;6.8MM_PTH - &lt;/b&gt; &lt;a href="https://www.digikey.com/product-detail/en/seiko-instruments/MS621FE-FL11E/728-1057-ND/1889208?WT.srch=1&amp;gclid=CNOQ5a6LzdQCFZS2wAodXCkE0g"&gt;Coin Cell Battery Holder - 6.8MM(SMD)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;12MM_SMD - &lt;/b&gt; &lt;a href="https://www.sparkfun.com/products/10592"&gt;Coin Cell Battery Holder - 12mm (SMD)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;12MM_PTH - &lt;/b&gt;&lt;a href="https://www.sparkfun.com/products/7948"&gt;Coin Cell Battery Holder - 12mm (PTH)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;20MM_SMD - &lt;/b&gt; 20mm Coin Cell Battery Holder (SMD) (2 legs)&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Used on the &lt;a href="https://www.sparkfun.com/products/11734"&gt;Big Time Watch Kit&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;&lt;b&gt;20MM_SMD_4LEGS - &lt;/b&gt; &lt;a href="https://www.sparkfun.com/products/11892"&gt;Coin Cell Battery Holder - 20mm (SMD)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;20MM_SMD_4LEGS_OVERPASTE - &lt;/b&gt; &lt;a href="https://www.sparkfun.com/products/11892"&gt;Coin Cell Battery Holder - 20mm (SMD)&lt;/a&gt; (Over-paste on the legs)&lt;/li&gt;&lt;li&gt;&lt;b&gt;24.5MM_PTH - &lt;/b&gt; &lt;a href="https://www.sparkfun.com/products/8863"&gt;Coin Cell Battery Holder - 24.5mm (PTH)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;9V - &lt;/b&gt; 9V Battery Holder - PC Mount &lt;/li&gt;&lt;ul&gt;&lt;li&gt;Used on the &lt;a href="https://www.sparkfun.com/products/11177"&gt;SparkFun SparkPunk Sound Kit &lt;/a&gt; and &lt;a href="https://www.sparkfun.com/products/12707"&gt;SparkFun SparkPunk Sequencer Kit &lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;&lt;b&gt;18650 - &lt;/b&gt; &lt;a href="https://www.sparkfun.com/products/13113"&gt;Battery Holder - 18650 (PTH)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;AA - &lt;/b&gt; &lt;a href="https://www.sparkfun.com/products/7949"&gt;Battery Holder - 1xAA (PTH)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;AAA - &lt;/b&gt; &lt;a href="https://www.sparkfun.com/products/12718"&gt;Battery Holder - 1xAAA (PTH)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;AA_KIT - &lt;/b&gt; &lt;a href="https://www.sparkfun.com/products/7949"&gt;Battery Holder - 1xAA (PTH)&lt;/a&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Special kit package - pads only have exposed copper on one side of the board.&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;&lt;b&gt;AAA_KIT - &lt;/b&gt; &lt;a href="https://www.sparkfun.com/products/12718"&gt;Battery Holder - 1xAAA (PTH)&lt;/a&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;Special kit package - pads only have exposed copper on one side of the board.&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;</description>
+      <footprints>
+        <fp>*BATTCON-6.8MM*</fp>
+        <fp>*BATTCON_9V*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">BT</field>
+        <field name="Value">BATTERY-6.8MM_SMD</field>
+        <field name="Footprint">BATTCON-6.8MM</field>
+        <field name="Field4">BATT-13734</field>
+      </fields>
+      <pins>
+        <pin num="+" name="+" type="power_in"/>
+        <pin num="-" name="-" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="SparkFun-Capacitors" part="0.1UF-0603-25V-5%">
+      <description>0.1uF ceramic capacitors A capacitor is a passive two-terminal electrical component used to store electrical energy temporarily in an electric field.</description>
+      <footprints>
+        <fp>*0603*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">0.1UF-0603-25V-5%</field>
+        <field name="Footprint">0603</field>
+        <field name="Field4">CAP-08604</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SparkFun-Capacitors" part="10UF-1210-50V-20%">
+      <description>10.0uF ceramic capacitors A capacitor is a passive two-terminal electrical component used to store electrical energy temporarily in an electric field.</description>
+      <footprints>
+        <fp>*1210*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">10UF-1210-50V-20%</field>
+        <field name="Footprint">1210</field>
+        <field name="Field4">CAP-09824</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SparkFun-Capacitors" part="22UF-1210-16V-20%">
+      <description>22uF ceramic capacitors A capacitor is a passive two-terminal electrical component used to store electrical energy temporarily in an electric field.</description>
+      <footprints>
+        <fp>*1210*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">22UF-1210-16V-20%</field>
+        <field name="Footprint">1210</field>
+        <field name="Field4">XXX-00000</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SparkFun-Coils" part="FERRITE_BEAD-0603">
+      <description>Ferrite Bead (blocks, cores, rings, chokes, etc.) Inductor with layers of ferrite used to suppress high frequencies. Often used to isolate high frequency noise. SparkFun Products:&lt;ul&gt;&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/13613"&gt;IOIO-OTG - V2.2&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/13664"&gt;SparkFun SAMD21 Mini Breakout&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/13339"&gt;SparkFun 6 Degrees of Freedom Breakout - LSM6DS3&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/13672"&gt;SparkFun SAMD21 Dev Breakout&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</description>
+      <footprints>
+        <fp>*0603*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">FB</field>
+        <field name="Value">FERRITE_BEAD-0603</field>
+        <field name="Footprint">0603</field>
+        <field name="Field4">NDUC-07859</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SparkFun-Connectors" part="OBDII">
+      <description>OBD-II Connector OBDII is an on board diagnostics standard that is used on a large variety of cars.  &lt;b&gt;Here is the connector we sell at SparkFun:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/9911"&gt;OBD-II connector&lt;/a&gt; (DEV-09911)&lt;/li&gt;&lt;li&gt;&lt;a href="http://pinoutsguide.com/CarElectronics/car_obd2_pinout.shtml"&gt;Info and Pinout&lt;/a&gt; (sorry, no datasheet)&lt;/li&gt;&lt;/ul&gt; &lt;b&gt;We do not use this connector on any active designs, however, if you're looking for OBDII tech, please check out these:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="https://www.sparkfun.com/search/results?term=obd"&gt;SparkFun OBD related products&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</description>
+      <footprints>
+        <fp>*OBDII*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">OBDII</field>
+        <field name="Footprint">OBDII</field>
+        <field name="Field4">DEV-09911</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="BiDi"/>
+        <pin num="2" name="J1850BUS+" type="BiDi"/>
+        <pin num="3" name="3" type="BiDi"/>
+        <pin num="4" name="CHASGND" type="BiDi"/>
+        <pin num="5" name="SIGGND" type="BiDi"/>
+        <pin num="6" name="CANHIGH" type="BiDi"/>
+        <pin num="7" name="ISOK-LINE" type="BiDi"/>
+        <pin num="8" name="8" type="BiDi"/>
+        <pin num="9" name="9" type="BiDi"/>
+        <pin num="10" name="J1850BUS" type="BiDi"/>
+        <pin num="11" name="11" type="BiDi"/>
+        <pin num="12" name="12" type="BiDi"/>
+        <pin num="13" name="13" type="BiDi"/>
+        <pin num="14" name="CANLOW" type="BiDi"/>
+        <pin num="15" name="ISOL-LINE" type="BiDi"/>
+        <pin num="16" name="BATTPOWER" type="BiDi"/>
+      </pins>
+    </libpart>
+    <libpart lib="SparkFun-LED" part="LED-RED0603">
+      <description>Red SMD LED Used in manufacturing of most products at SparkFun &lt;b&gt;Packages:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;0603&lt;/b&gt; - SMD 0603 package &lt;a href="http://docs.avagotech.com/docs/AV02-0551EN"&gt;[Product Link]&lt;/li&gt;&lt;li&gt;&lt;b&gt;0603 SMART&lt;/b&gt; - SMD 0603 SMART package ( more efficient and expensive)&lt;a href="http://www.osram-os.com/Graphics/XPic2/00077099_0.pdf"&gt;[Product Link]&lt;/li&gt;&lt;li&gt;&lt;b&gt; 1206&lt;/b&gt; - SMD1206  package &lt;a href="https://www.sparkfun.com/datasheets/DevTools/LilyPad/Q150OVS4.pdff"&gt;[Product Link]&lt;/li&gt;&lt;ul&gt; &lt;b&gt;SparkFun Products:&lt;/b&gt;&lt;ul&gt;&lt;li&gt;&lt;a href= https://www.sparkfun.com/products/821 &gt;Pro Mini 328 -5V&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href= https://www.sparkfun.com/products/12757 &gt;RedBoard&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href= https://www.sparkfun.com/products/13613 &gt;IOIO-OTG&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</description>
+      <footprints>
+        <fp>*LED-0603*</fp>
+        <fp>*LED-0603*</fp>
+        <fp>*LED-1206*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED-RED0603</field>
+        <field name="Footprint">LED-0603</field>
+        <field name="Field4">DIO-00819</field>
+      </fields>
+      <pins>
+        <pin num="A" name="A" type="passive"/>
+        <pin num="C" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="SparkFun-Resistors" part="RESISTOR0603">
+      <description>Generic Resistor Package</description>
+      <footprints>
+        <fp>*0603*</fp>
+        <fp>*0805*</fp>
+        <fp>*1206*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">RESISTOR0603</field>
+        <field name="Footprint">0603</field>
+        <field name="Field4"> </field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="brian-custom" part="IHLP2020BZER4R7M11">
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">IHLP2020BZER4R7M11</field>
+        <field name="Footprint">brian-custom:IHLP2020BZER4R7M11</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="brian-custom" part="TPS563200DDCR">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPS563200DDCR</field>
+        <field name="Footprint">digikey-footprints:SOT-23-6</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="input"/>
+        <pin num="2" name="SW" type="input"/>
+        <pin num="3" name="VIN" type="input"/>
+        <pin num="4" name="VFB" type="input"/>
+        <pin num="5" name="EN" type="input"/>
+        <pin num="6" name="VBST" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="dk_Coaxial-Connectors-RF" part="142-0701-801">
+      <description>CONN SMA JACK STR 50OHM EDGE MNT</description>
+      <docs>http://www.belfuse.com/resources/Johnson/drawings/dr-1420701801.pdf</docs>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">142-0701-801</field>
+        <field name="Footprint">digikey-footprints:RF_SMA_BoardEdge_142-0701-801</field>
+        <field name="Datasheet">http://www.belfuse.com/resources/Johnson/drawings/dr-1420701801.pdf</field>
+        <field name="Digi-Key_PN">J502-ND</field>
+        <field name="MPN">142-0701-801</field>
+        <field name="Category">Connectors, Interconnects</field>
+        <field name="Family">Coaxial Connectors (RF)</field>
+        <field name="DK_Datasheet_Link">http://www.belfuse.com/resources/Johnson/drawings/dr-1420701801.pdf</field>
+        <field name="DK_Detail_Page">/product-detail/en/cinch-connectivity-solutions-johnson/142-0701-801/J502-ND/35280</field>
+        <field name="Description">CONN SMA JACK STR 50OHM EDGE MNT</field>
+        <field name="Manufacturer">Cinch Connectivity Solutions Johnson</field>
+        <field name="Status">Active</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="dk_Diodes-Rectifiers-Single" part="1N4007-T_NRND">
+      <description>DIODE GEN PURP 1KV 1A DO41</description>
+      <docs>https://www.diodes.com/assets/Datasheets/ds28002.pdf</docs>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">1N4007-T_NRND</field>
+        <field name="Footprint">digikey-footprints:DO-41</field>
+        <field name="Datasheet">https://www.diodes.com/assets/Datasheets/ds28002.pdf</field>
+        <field name="Digi-Key_PN">1N4007DICT-ND</field>
+        <field name="MPN">1N4007-T</field>
+        <field name="Category">Discrete Semiconductor Products</field>
+        <field name="Family">Diodes - Rectifiers - Single</field>
+        <field name="DK_Datasheet_Link">https://www.diodes.com/assets/Datasheets/ds28002.pdf</field>
+        <field name="DK_Detail_Page">/product-detail/en/diodes-incorporated/1N4007-T/1N4007DICT-ND/76454</field>
+        <field name="Description">DIODE GEN PURP 1KV 1A DO41</field>
+        <field name="Manufacturer">Diodes Incorporated</field>
+        <field name="Status">Not For New Designs</field>
+      </fields>
+      <pins>
+        <pin num="A" name="~" type="passive"/>
+        <pin num="K" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="dk_Interface-Drivers-Receivers-Transceivers" part="MCP2551-I_SN">
+      <description>IC TRANSCEIVER CAN HI-SPD 8-SOIC</description>
+      <docs>http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en011797</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MCP2551-I_SN</field>
+        <field name="Footprint">digikey-footprints:SOIC-8_W3.9mm</field>
+        <field name="Datasheet">http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en011797</field>
+        <field name="Digi-Key_PN">MCP2551-I/SN-ND</field>
+        <field name="MPN">MCP2551-I/SN</field>
+        <field name="Category">Integrated Circuits (ICs)</field>
+        <field name="Family">Interface - Drivers, Receivers, Transceivers</field>
+        <field name="DK_Datasheet_Link">http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en011797</field>
+        <field name="DK_Detail_Page">/product-detail/en/microchip-technology/MCP2551-I-SN/MCP2551-I-SN-ND/509452</field>
+        <field name="Description">IC TRANSCEIVER CAN HI-SPD 8-SOIC</field>
+        <field name="Manufacturer">Microchip Technology</field>
+        <field name="Status">Active</field>
+      </fields>
+      <pins>
+        <pin num="1" name="TXD" type="input"/>
+        <pin num="2" name="VSS" type="power_in"/>
+        <pin num="3" name="VDD" type="power_in"/>
+        <pin num="4" name="RXD" type="output"/>
+        <pin num="5" name="VREF" type="output"/>
+        <pin num="6" name="CANL" type="BiDi"/>
+        <pin num="7" name="CANH" type="BiDi"/>
+        <pin num="8" name="RS" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="teensy" part="Teensy4.0">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Teensy4.0</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="0_RX1_CRX2" type="BiDi"/>
+        <pin num="3" name="1_TX1_CTX2" type="BiDi"/>
+        <pin num="4" name="2_OUT2" type="BiDi"/>
+        <pin num="5" name="3_LRCLK2" type="BiDi"/>
+        <pin num="6" name="4_BCLK2" type="BiDi"/>
+        <pin num="7" name="5_IN2" type="BiDi"/>
+        <pin num="8" name="6_OUT1D" type="BiDi"/>
+        <pin num="9" name="7_RX2_OUT1A" type="BiDi"/>
+        <pin num="10" name="8_TX2_IN1" type="BiDi"/>
+        <pin num="11" name="9_OUT1C" type="BiDi"/>
+        <pin num="12" name="10_CS_MQSR" type="BiDi"/>
+        <pin num="13" name="11_MOSI_CTX1" type="BiDi"/>
+        <pin num="14" name="12_MISO_MQSL" type="BiDi"/>
+        <pin num="15" name="VBAT" type="power_in"/>
+        <pin num="16" name="3V3" type="power_out"/>
+        <pin num="17" name="GND" type="power_in"/>
+        <pin num="18" name="PROGRAM" type="input"/>
+        <pin num="19" name="ON_OFF" type="input"/>
+        <pin num="20" name="13_SCK_CRX1_LED" type="BiDi"/>
+        <pin num="21" name="14_A0_TX3_SPDIF_OUT" type="BiDi"/>
+        <pin num="22" name="15_A1_RX3_SPDIF_IN" type="BiDi"/>
+        <pin num="23" name="16_A2_RX4_SCL1" type="BiDi"/>
+        <pin num="24" name="17_A3_TX4_SDA1" type="BiDi"/>
+        <pin num="25" name="18_A4_SDA0" type="BiDi"/>
+        <pin num="26" name="19_A5_SCL0" type="BiDi"/>
+        <pin num="27" name="20_A6_TX5_LRCLK1" type="BiDi"/>
+        <pin num="28" name="21_A7_RX5_BCLK1" type="BiDi"/>
+        <pin num="29" name="22_A8_CTX1" type="BiDi"/>
+        <pin num="30" name="23_A9_CRX1_MCLK1" type="BiDi"/>
+        <pin num="31" name="3V3" type="power_out"/>
+        <pin num="32" name="GND" type="power_in"/>
+        <pin num="33" name="VIN" type="power_in"/>
+        <pin num="34" name="VUSB" type="power_out"/>
+        <pin num="~" name="35_DAT1_MOSI2" type="BiDi"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>/usr/share/kicad/library/kicad-symbols/Connector.lib</uri>
+    </library>
+    <library logical="RF_GPS">
+      <uri>/usr/share/kicad/library/kicad-symbols/RF_GPS.lib</uri>
+    </library>
+    <library logical="SN65HVDA195QDRQ1">
+      <uri>/usr/share/kicad/library/SN65HVDA195QDRQ1/KiCAD/2019-11-25_22-35-11/2019-11-25_22-35-11.lib</uri>
+    </library>
+    <library logical="SparkFun-Batteries">
+      <uri>/usr/share/kicad/library/SparkFun-KiCad-Libraries/Libraries/SparkFun-Batteries.lib</uri>
+    </library>
+    <library logical="SparkFun-Capacitors">
+      <uri>/usr/share/kicad/library/SparkFun-KiCad-Libraries/Libraries/SparkFun-Capacitors.lib</uri>
+    </library>
+    <library logical="SparkFun-Coils">
+      <uri>/usr/share/kicad/library/SparkFun-KiCad-Libraries/Libraries/SparkFun-Coils.lib</uri>
+    </library>
+    <library logical="SparkFun-Connectors">
+      <uri>/usr/share/kicad/library/SparkFun-KiCad-Libraries/Libraries/SparkFun-Connectors.lib</uri>
+    </library>
+    <library logical="SparkFun-LED">
+      <uri>/usr/share/kicad/library/SparkFun-KiCad-Libraries/Libraries/SparkFun-LED.lib</uri>
+    </library>
+    <library logical="SparkFun-Resistors">
+      <uri>/usr/share/kicad/library/SparkFun-KiCad-Libraries/Libraries/SparkFun-Resistors.lib</uri>
+    </library>
+    <library logical="brian-custom">
+      <uri>/usr/share/kicad/library/brian-custom.lib</uri>
+    </library>
+    <library logical="dk_Coaxial-Connectors-RF">
+      <uri>/usr/share/kicad/library/digikey-kicad-library/digikey-symbols/dk_Coaxial-Connectors-RF.lib</uri>
+    </library>
+    <library logical="dk_Diodes-Rectifiers-Single">
+      <uri>/usr/share/kicad/library/digikey-kicad-library/digikey-symbols/dk_Diodes-Rectifiers-Single.lib</uri>
+    </library>
+    <library logical="dk_Interface-Drivers-Receivers-Transceivers">
+      <uri>/usr/share/kicad/library/digikey-kicad-library/digikey-symbols/dk_Interface-Drivers-Receivers-Transceivers.lib</uri>
+    </library>
+    <library logical="teensy">
+      <uri>/usr/share/kicad/library/teensy_library/teensy.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(J1-Pad2)">
+      <node ref="J1" pin="2"/>
+    </net>
+    <net code="2" name="GND">
+      <node ref="J2" pin="1"/>
+      <node ref="R14" pin="2"/>
+      <node ref="R15" pin="2"/>
+      <node ref="R16" pin="2"/>
+      <node ref="R12" pin="2"/>
+      <node ref="J2" pin="2"/>
+      <node ref="U1" pin="5"/>
+      <node ref="J3" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="U4" pin="1"/>
+      <node ref="U1" pin="3"/>
+      <node ref="J4" pin="2"/>
+      <node ref="J4" pin="1"/>
+      <node ref="R7" pin="2"/>
+      <node ref="U3" pin="17"/>
+      <node ref="U3" pin="32"/>
+      <node ref="U5" pin="7"/>
+      <node ref="U5" pin="24"/>
+      <node ref="U3" pin="1"/>
+      <node ref="U5" pin="13"/>
+      <node ref="U5" pin="12"/>
+      <node ref="U5" pin="10"/>
+      <node ref="R5" pin="2"/>
+      <node ref="C3" pin="2"/>
+      <node ref="J1" pin="5"/>
+      <node ref="U2" pin="2"/>
+      <node ref="BT1" pin="-"/>
+      <node ref="FB1" pin="1"/>
+      <node ref="R11" pin="2"/>
+    </net>
+    <net code="3" name="Net-(J1-Pad13)">
+      <node ref="J1" pin="13"/>
+    </net>
+    <net code="4" name="Net-(J1-Pad12)">
+      <node ref="J1" pin="12"/>
+    </net>
+    <net code="5" name="Net-(J1-Pad11)">
+      <node ref="J1" pin="11"/>
+    </net>
+    <net code="6" name="Net-(J1-Pad10)">
+      <node ref="J1" pin="10"/>
+    </net>
+    <net code="7" name="Net-(J1-Pad9)">
+      <node ref="J1" pin="9"/>
+    </net>
+    <net code="8" name="Net-(J1-Pad1)">
+      <node ref="J1" pin="1"/>
+    </net>
+    <net code="9" name="GNDPWR">
+      <node ref="J1" pin="4"/>
+      <node ref="FB1" pin="2"/>
+    </net>
+    <net code="10" name="Net-(J1-Pad3)">
+      <node ref="J1" pin="3"/>
+    </net>
+    <net code="11" name="Net-(J1-Pad8)">
+      <node ref="J1" pin="8"/>
+    </net>
+    <net code="12" name="CAN_P">
+      <node ref="U2" pin="7"/>
+      <node ref="J1" pin="6"/>
+      <node ref="R10" pin="2"/>
+    </net>
+    <net code="13" name="CAN_N">
+      <node ref="U2" pin="6"/>
+      <node ref="R10" pin="1"/>
+      <node ref="J1" pin="14"/>
+    </net>
+    <net code="14" name="Net-(R9-Pad1)">
+      <node ref="U3" pin="34"/>
+      <node ref="R9" pin="1"/>
+    </net>
+    <net code="15" name="Net-(R1-Pad2)">
+      <node ref="R2" pin="2"/>
+      <node ref="R3" pin="2"/>
+      <node ref="R13" pin="1"/>
+      <node ref="U1" pin="6"/>
+      <node ref="R1" pin="2"/>
+    </net>
+    <net code="16" name="Net-(D1-PadC)">
+      <node ref="D1" pin="C"/>
+      <node ref="R11" pin="1"/>
+    </net>
+    <net code="17" name="KLINE">
+      <node ref="R2" pin="1"/>
+      <node ref="J1" pin="7"/>
+    </net>
+    <net code="18" name="LLINE">
+      <node ref="J1" pin="15"/>
+      <node ref="R3" pin="1"/>
+    </net>
+    <net code="19" name="3.3V">
+      <node ref="R8" pin="1"/>
+      <node ref="J2" pin="14"/>
+      <node ref="U3" pin="16"/>
+      <node ref="U3" pin="31"/>
+      <node ref="U5" pin="23"/>
+    </net>
+    <net code="20" name="Net-(U3-Pad~)">
+      <node ref="U3" pin="~"/>
+    </net>
+    <net code="21" name="Net-(U3-Pad~)">
+      <node ref="U3" pin="~"/>
+    </net>
+    <net code="22" name="KLINE_RX">
+      <node ref="U1" pin="1"/>
+      <node ref="U3" pin="28"/>
+    </net>
+    <net code="23" name="Net-(U2-Pad4)">
+      <node ref="U2" pin="4"/>
+      <node ref="U3" pin="30"/>
+    </net>
+    <net code="24" name="Net-(U2-Pad1)">
+      <node ref="U3" pin="29"/>
+      <node ref="U2" pin="1"/>
+    </net>
+    <net code="25" name="Net-(U1-Pad8)">
+      <node ref="U1" pin="8"/>
+    </net>
+    <net code="26" name="Net-(U2-Pad5)">
+      <node ref="U2" pin="5"/>
+    </net>
+    <net code="27" name="KLINE_TX">
+      <node ref="U1" pin="4"/>
+      <node ref="U3" pin="27"/>
+    </net>
+    <net code="28" name="Net-(U3-Pad19)">
+      <node ref="U3" pin="19"/>
+    </net>
+    <net code="29" name="Net-(U3-Pad18)">
+      <node ref="U3" pin="18"/>
+    </net>
+    <net code="30" name="Net-(U3-Pad3)">
+      <node ref="U3" pin="3"/>
+    </net>
+    <net code="31" name="Net-(U3-Pad2)">
+      <node ref="U3" pin="2"/>
+    </net>
+    <net code="32" name="Net-(J3-Pad1)">
+      <node ref="J3" pin="1"/>
+      <node ref="U5" pin="11"/>
+    </net>
+    <net code="33" name="Net-(U5-Pad5)">
+      <node ref="U5" pin="5"/>
+    </net>
+    <net code="34" name="V_BATT">
+      <node ref="D2" pin="K"/>
+      <node ref="R4" pin="1"/>
+      <node ref="U4" pin="3"/>
+      <node ref="C1" pin="1"/>
+      <node ref="R1" pin="1"/>
+      <node ref="U1" pin="7"/>
+      <node ref="D4" pin="A"/>
+    </net>
+    <net code="35" name="Net-(U3-Pad6)">
+      <node ref="U3" pin="6"/>
+    </net>
+    <net code="36" name="Net-(U3-Pad7)">
+      <node ref="U3" pin="7"/>
+    </net>
+    <net code="37" name="Net-(U5-Pad9)">
+      <node ref="U5" pin="9"/>
+    </net>
+    <net code="38" name="Net-(U5-Pad6)">
+      <node ref="U5" pin="6"/>
+    </net>
+    <net code="39" name="Net-(U5-Pad18)">
+      <node ref="U5" pin="18"/>
+    </net>
+    <net code="40" name="Net-(U5-Pad19)">
+      <node ref="U5" pin="19"/>
+    </net>
+    <net code="41" name="Net-(U5-Pad15)">
+      <node ref="U5" pin="15"/>
+    </net>
+    <net code="42" name="Net-(U5-Pad4)">
+      <node ref="U5" pin="4"/>
+    </net>
+    <net code="43" name="Net-(U5-Pad2)">
+      <node ref="U5" pin="2"/>
+    </net>
+    <net code="44" name="Net-(U5-Pad14)">
+      <node ref="U5" pin="14"/>
+    </net>
+    <net code="45" name="MCU_TX4">
+      <node ref="U3" pin="24"/>
+      <node ref="J4" pin="7"/>
+      <node ref="J2" pin="8"/>
+    </net>
+    <net code="46" name="5V">
+      <node ref="R9" pin="2"/>
+      <node ref="R6" pin="1"/>
+      <node ref="U2" pin="3"/>
+      <node ref="L1" pin="1"/>
+      <node ref="U3" pin="33"/>
+      <node ref="C3" pin="1"/>
+      <node ref="J4" pin="5"/>
+      <node ref="J4" pin="6"/>
+      <node ref="J2" pin="11"/>
+      <node ref="D1" pin="A"/>
+      <node ref="J2" pin="10"/>
+    </net>
+    <net code="47" name="LED4">
+      <node ref="D5" pin="A"/>
+      <node ref="U3" pin="9"/>
+    </net>
+    <net code="48" name="Net-(D5-PadC)">
+      <node ref="D5" pin="C"/>
+      <node ref="R14" pin="1"/>
+    </net>
+    <net code="49" name="Net-(D6-PadC)">
+      <node ref="R15" pin="1"/>
+      <node ref="D6" pin="C"/>
+    </net>
+    <net code="50" name="Net-(D7-PadC)">
+      <node ref="R16" pin="1"/>
+      <node ref="D7" pin="C"/>
+    </net>
+    <net code="51" name="Net-(D4-PadC)">
+      <node ref="D4" pin="C"/>
+      <node ref="R13" pin="2"/>
+    </net>
+    <net code="52" name="Net-(D3-PadC)">
+      <node ref="D3" pin="C"/>
+      <node ref="R12" pin="1"/>
+    </net>
+    <net code="53" name="PWR_EN">
+      <node ref="D3" pin="A"/>
+      <node ref="R4" pin="2"/>
+      <node ref="U4" pin="5"/>
+      <node ref="J2" pin="9"/>
+      <node ref="R5" pin="1"/>
+    </net>
+    <net code="54" name="MCU_RX4">
+      <node ref="J2" pin="7"/>
+      <node ref="U3" pin="23"/>
+      <node ref="J4" pin="8"/>
+    </net>
+    <net code="55" name="MCU_SCL0">
+      <node ref="J4" pin="3"/>
+      <node ref="J2" pin="13"/>
+      <node ref="U3" pin="26"/>
+    </net>
+    <net code="56" name="MCU_SDA0">
+      <node ref="J4" pin="4"/>
+      <node ref="J2" pin="12"/>
+      <node ref="U3" pin="25"/>
+    </net>
+    <net code="57" name="Net-(U3-Pad~)">
+      <node ref="U3" pin="~"/>
+    </net>
+    <net code="58" name="Net-(U3-Pad~)">
+      <node ref="U3" pin="~"/>
+    </net>
+    <net code="59" name="Net-(U3-Pad~)">
+      <node ref="U3" pin="~"/>
+    </net>
+    <net code="60" name="Net-(U3-Pad~)">
+      <node ref="U3" pin="~"/>
+    </net>
+    <net code="61" name="Net-(U3-Pad~)">
+      <node ref="U3" pin="~"/>
+    </net>
+    <net code="62" name="Net-(U3-Pad~)">
+      <node ref="U3" pin="~"/>
+    </net>
+    <net code="63" name="Net-(U3-Pad~)">
+      <node ref="U3" pin="~"/>
+    </net>
+    <net code="64" name="Net-(U3-Pad~)">
+      <node ref="U3" pin="~"/>
+    </net>
+    <net code="65" name="Net-(U3-Pad~)">
+      <node ref="U3" pin="~"/>
+    </net>
+    <net code="66" name="Net-(U3-Pad~)">
+      <node ref="U3" pin="~"/>
+    </net>
+    <net code="67" name="Net-(U3-Pad~)">
+      <node ref="U3" pin="~"/>
+    </net>
+    <net code="68" name="Net-(U3-Pad~)">
+      <node ref="U3" pin="~"/>
+    </net>
+    <net code="69" name="Net-(U3-Pad~)">
+      <node ref="U3" pin="~"/>
+    </net>
+    <net code="70" name="Net-(U3-Pad~)">
+      <node ref="U3" pin="~"/>
+    </net>
+    <net code="71" name="Net-(U3-Pad~)">
+      <node ref="U3" pin="~"/>
+    </net>
+    <net code="72" name="Net-(U3-Pad~)">
+      <node ref="U3" pin="~"/>
+    </net>
+    <net code="73" name="Net-(U3-Pad~)">
+      <node ref="U3" pin="~"/>
+    </net>
+    <net code="74" name="Net-(U3-Pad~)">
+      <node ref="U3" pin="~"/>
+    </net>
+    <net code="75" name="Net-(C2-Pad2)">
+      <node ref="C2" pin="2"/>
+      <node ref="U4" pin="6"/>
+    </net>
+    <net code="76" name="/VBATT_RAW">
+      <node ref="D2" pin="A"/>
+      <node ref="J1" pin="16"/>
+    </net>
+    <net code="77" name="SPI_SCK">
+      <node ref="U3" pin="20"/>
+      <node ref="J2" pin="3"/>
+    </net>
+    <net code="78" name="VCOIN">
+      <node ref="R8" pin="2"/>
+      <node ref="BT1" pin="+"/>
+      <node ref="U3" pin="15"/>
+      <node ref="U5" pin="22"/>
+    </net>
+    <net code="79" name="SPI_DIN">
+      <node ref="J2" pin="4"/>
+      <node ref="U3" pin="14"/>
+    </net>
+    <net code="80" name="SPI_DOUT">
+      <node ref="J2" pin="5"/>
+      <node ref="U3" pin="13"/>
+    </net>
+    <net code="81" name="SPI_CS">
+      <node ref="U3" pin="12"/>
+      <node ref="J2" pin="6"/>
+    </net>
+    <net code="82" name="GPS_RSTn">
+      <node ref="U5" pin="8"/>
+      <node ref="U3" pin="11"/>
+    </net>
+    <net code="83" name="GPS_PPS">
+      <node ref="U5" pin="3"/>
+      <node ref="U3" pin="10"/>
+    </net>
+    <net code="84" name="CAN_ENn">
+      <node ref="U3" pin="4"/>
+      <node ref="U2" pin="8"/>
+    </net>
+    <net code="85" name="GPS_RX">
+      <node ref="U3" pin="21"/>
+      <node ref="U5" pin="21"/>
+    </net>
+    <net code="86" name="LED5">
+      <node ref="D6" pin="A"/>
+      <node ref="U3" pin="8"/>
+    </net>
+    <net code="87" name="KLINE_EN">
+      <node ref="U1" pin="2"/>
+      <node ref="U3" pin="5"/>
+    </net>
+    <net code="88" name="Net-(C2-Pad1)">
+      <node ref="C2" pin="1"/>
+      <node ref="U4" pin="2"/>
+      <node ref="L1" pin="2"/>
+    </net>
+    <net code="89" name="Net-(R6-Pad2)">
+      <node ref="U4" pin="4"/>
+      <node ref="R7" pin="1"/>
+      <node ref="R6" pin="2"/>
+    </net>
+    <net code="90" name="GPS_TX">
+      <node ref="U5" pin="20"/>
+      <node ref="U3" pin="22"/>
+    </net>
+    <net code="91" name="Net-(U5-Pad17)">
+      <node ref="U5" pin="17"/>
+    </net>
+    <net code="92" name="Net-(U5-Pad16)">
+      <node ref="U5" pin="16"/>
+    </net>
+    <net code="93" name="GPS_PPS2">
+      <node ref="U5" pin="1"/>
+      <node ref="D7" pin="A"/>
+    </net>
+  </nets>
+</export>
