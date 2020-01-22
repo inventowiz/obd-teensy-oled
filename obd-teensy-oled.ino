@@ -37,7 +37,8 @@ volatile uint8_t thread_pids[4] = { 0 }; // threads in this list will trip the W
 enum { PID_DISPLAY, PID_GPS, PID_CAN, PID_KLINE};
 
 //Conversions + constants
-#define AVG_WINDOW 100
+#define FUEL_AVG_WINDOW 100
+#define MPG_AVG_WINDOW 500
 #define FUEL_CAP_GAL 16.9
 #define FUEL_RES_FULL 2
 #define FUEL_RES_EMPTY 94
@@ -283,14 +284,14 @@ void serviceUSBSerial(){
 void serialUSBRelayTask(void *arg){
   // arg must be a hardware serial device
   HardwareSerial *serial = (HardwareSerial*)arg;
-  Serial.println(F("Starting serial relay"));
+  Serial.println(F("Starting serial relay, reboot to quit"));
   while(1){
     noInterrupts();
     while(Serial.available()){
       // handle exit seq
       if(Serial.peek() == 0x03){ //ctrl+c
-        Serial.println(F("Killing serial relay"));
-        return;
+        //Serial.println(F("Killing serial relay"));
+        //return;
       }
         
       serial->write(Serial.read());
@@ -485,16 +486,14 @@ void calcLongTerms(){
   km_traveled += (rtd.speed_kph/HOUR_TO_SEC);
 
   // only update fuel level if not moving
-  // TODO use lateral acceleration to change when not accelerating
+  // TODO use longitudinal acceleration to change when not accelerating
   if(rtd.speed_kph < 1){
-    fuel_percent = (fuel_percent*(AVG_WINDOW-1)+rtd.fuel_percent)/(float)AVG_WINDOW;
+    fuel_percent = (fuel_percent*(FUEL_AVG_WINDOW-1)+rtd.fuel_percent)/(float)FUEL_AVG_WINDOW;
   }
 
-  // always update when moving
+  // always update when moving and stopped
   // remember to multiply value by 5
-  if(rtd.speed_kph > 5){
-    *fuel_mpg_trip = (((*fuel_mpg_trip)/5.0*(AVG_WINDOW-1)+rtd.fuel_mpg_inst)/(float)AVG_WINDOW)*5;
-  }
+  *fuel_mpg_trip = (((*fuel_mpg_trip)/5.0*(MPG_AVG_WINDOW-1)+rtd.fuel_mpg_inst)/(float)MPG_AVG_WINDOW)*5;
 
   // update based on our new fuel level % and long term mpg
   // do not average this, fuel % and mpg will smooth for us
@@ -571,14 +570,14 @@ void updateDisplayTask(){
     oled.setCursor(oled.width()-(3*6),8);
     oled.printf(F("Ext"));
   
-    // Eng temps bottom right (Engine, Fuel, Outside)
+    // bottom right small
     oled.setTextSize(1);
     oled.setCursor(rightLineX+3,rightDiv3Y+2);
-    oled.printf(F("%-4.1f  %4.1f"),C_TO_F(rtd.temp_eng),fuel_percent); //C_TO_F(rtd.temp_fuel));
+    oled.printf(F("%-4.1f  %4.0f"),(rtd.accel_pos-rtd.brake_pos),rtd.gear_pos);
     oled.setCursor(rightLineX+3+(12*6),rightDiv3Y+5);
-    oled.printf(F("  F"));
+    oled.printf(F("   "));
     oled.setCursor(rightLineX+3,rightDiv3Y+10);
-    oled.printf(F(" Eng  Fuel"));
+    oled.printf(F(" Pdl  Gear"));
   
     // Economy info below ext temp
     oled.setTextSize(1);
@@ -606,41 +605,34 @@ void updateDisplayTask(){
     oled.setCursor(leftLineX-3-(4*6),leftDiv1Y+2+8);
     oled.printf(F("to E"));
   
-    // left left bottom big
+    // left left bottom big show eng temp
     oled.setTextSize(2);
     oled.setCursor(0,leftDiv2Y+3);
-    oled.printf(F("%3.0f"),rtd.manifold_pressure);
+    oled.printf(F("%3.0f"),C_TO_F(rtd.temp_eng));
     oled.setTextSize(1);
     oled.setCursor(11*3,leftDiv2Y+3);
-    oled.printf(F(".%01d"), getDecimalTenth(rtd.manifold_pressure));  
+    oled.printf(F(".%01d"), getDecimalTenth(C_TO_F(rtd.temp_eng)));  
     oled.setCursor(0,leftDiv2Y+3+16+2);
-    oled.printf(F("MAP psi"));
+    oled.printf(F("Eng F"));
   
-    // left right bottom big
+    // left right bottom big show fuel %
     oled.setTextSize(2);
     oled.setCursor(leftDiv3X+2,leftDiv2Y+3);
-    oled.printf(F("%3.0f"),rtd.timing_advance);
+    oled.printf(F("%3.0f"),fuel_percent);
     oled.setTextSize(1);
     oled.setCursor(leftDiv3X+2+11*3,leftDiv2Y+2);
-    oled.printf(F(".%01d"), getDecimalTenth(rtd.timing_advance));
+    oled.printf(F(".%01d"), getDecimalTenth(fuel_percent));
     oled.setCursor(leftDiv3X+2,leftDiv2Y+3+16+2);
-    oled.printf(F("time adv"));
+    oled.printf(F("fuel %"));
   
     // gps info
     gps.f_get_position(&lat, &lon, &age);
-    //course = gps.f_course();
     oled.setTextSize(1);
     oled.setCursor(0,0);
     oled.printf(F("%3.1f MPH"), gps.f_speed_mph());
     oled.setCursor(0,8);
-    if(!(second()%5)) // every 5 seconds show age
-      oled.printf(F("%4d ms"),age);
-    else{
-      if(gps.altitude() == TinyGPS::GPS_INVALID_ALTITUDE)
-        oled.printf(F("nan ft"));
-      else
-        oled.printf(F("%4.1f ft"),gps.f_altitude()/FT_TO_CM);
-    }
+    // show age
+    oled.printf(F("%4d ms"),age);
     // show course
     oled.setCursor(11*6,0);
     oled.printf(F("%-3s"),gps.cardinal(gps.f_course()));
@@ -648,12 +640,9 @@ void updateDisplayTask(){
     oled.printf(F("%4g\xA7"),gps.f_course());
     // put number of sats to the left of the ext temp
     oled.setCursor(oled.width()-((2*12)+(8*6)),0);
-    if(gps.hdop() == TinyGPS::GPS_INVALID_HDOP)
-      oled.printf(F("inf"));
-    else
-      oled.printf(F("%3.1f"), gps.hdop()/100.0);
+    oled.printf(F("%3.1f"), gps.satellites());
     oled.setCursor(oled.width()-((2*12)+(9*6)),7);
-    oled.printf(F("hdop"));
+    oled.printf(F("sats"));
   
     // wheel speeds
     oled.drawLine(oled.width()/2,leftDiv1Y+3,oled.width()/2,rightDiv3Y,WHITE);
