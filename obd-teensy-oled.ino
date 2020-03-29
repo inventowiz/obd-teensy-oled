@@ -36,7 +36,12 @@ volatile uint8_t SSM_poll_scratch[7+3*(sizeof(SSM_pid_list)/sizeof(uint16_t))] =
 volatile uint8_t thread_pids[4] = { 0 }; // threads in this list will trip the WDT
 enum { PID_DISPLAY, PID_GPS, PID_CAN, PID_KLINE};
 
+// Timers for firing high precision tasks
+IntervalTimer TaskPetWdt;
+IntervalTimer CalcNewLongTerms;
+
 //Conversions + constants
+#define EARLY_START_MS 2500
 #define FUEL_AVG_WINDOW 100
 #define MPG_AVG_WINDOW 500
 #define FUEL_CAP_GAL 16.9
@@ -63,10 +68,6 @@ enum { PID_DISPLAY, PID_GPS, PID_CAN, PID_KLINE};
 #define Spare_Serial Serial4
 #define KLINE_Serial Serial5
 
-// Timers for firing high precision tasks
-IntervalTimer TaskPetWdt;
-IntervalTimer CalcNewLongTerms;
-
 // store the last time we displayed on screen
 volatile uint32_t loopTimer = millis();
 
@@ -92,8 +93,8 @@ static const uint8_t rightDiv3Y = 3*(oled.height()/4)-2;
 // GPS Module
 TinyGPS gps;
 // Offset hours from gps time (UTC)
-#define TZ_OFFSET -5  // Eastern Standard Time (USA)
-//#define TZ_OFFSET -4  // Eastern Daylight Time (USA)
+//#define TZ_OFFSET -5  // Eastern Standard Time (USA)
+#define TZ_OFFSET -4  // Eastern Daylight Time (USA)
 
 // real time GPS data, only modified in one thread
 uint32_t age;
@@ -131,6 +132,9 @@ volatile float fuel_percent = 100*((*miles_to_e/10.0)/((*fuel_mpg_trip/5.0)*FUEL
 volatile double km_traveled = 0;
 
 void setup() {  
+  //temporarily set trip mpg to 20mpg to start
+  *fuel_mpg_trip = 20*5;
+  
   // USB serial interface
   Serial.begin(115200);
   pinMode(LED5,OUTPUT);
@@ -168,7 +172,7 @@ void setup() {
 
   // Define and start the high precision timers
   TaskPetWdt.begin(petWdt, 500000); // 500ms
-  CalcNewLongTerms.begin(calcLongTerms,1000000); // 1000ms
+  CalcNewLongTerms.begin(calcLongTerms, 250000); // 250ms
 
   // wait a tick before kicking off the threads
   delay(500);
@@ -481,19 +485,25 @@ void serviceKlineTask(){
   }
 }
 
-void calcLongTerms(){
+void calcLongTerms(){ // every 250ms
   // always update this
-  km_traveled += (rtd.speed_kph/HOUR_TO_SEC);
+  km_traveled += (((double)rtd.speed_kph/(double)HOUR_TO_SEC)/4.0/10.0);
 
   // only update fuel level if not moving
   // TODO use longitudinal acceleration to change when not accelerating
-  if(rtd.speed_kph < 1){
+  if(rtd.speed_kph/10.0 < 1){
     fuel_percent = (fuel_percent*(FUEL_AVG_WINDOW-1)+rtd.fuel_percent)/(float)FUEL_AVG_WINDOW;
+    if(millis()<EARLY_START_MS){
+      // we just started, let's give the fuel level a quick refresh
+      fuel_percent = rtd.fuel_percent;
+    }
   }
 
-  // always update when moving and stopped
+  // always update when moving as long as we're not maxed out
   // remember to multiply value by 5
-  *fuel_mpg_trip = (((*fuel_mpg_trip)/5.0*(MPG_AVG_WINDOW-1)+rtd.fuel_mpg_inst)/(float)MPG_AVG_WINDOW)*5;
+  if(rtd.speed_kph/10.0 > 1){
+    *fuel_mpg_trip = (((*fuel_mpg_trip)/5.0*(MPG_AVG_WINDOW-1)+rtd.fuel_mpg_inst)/(float)MPG_AVG_WINDOW)*5;
+  }
 
   // update based on our new fuel level % and long term mpg
   // do not average this, fuel % and mpg will smooth for us
@@ -553,7 +563,7 @@ void updateDisplayTask(){
     oled.setTextSize(2);
     oled.setTextColor(WHITE);
     oled.setCursor((oled.width()/2)-(12*2.25),0);
-    oled.printf(F("%2d"),hour()+TZ_OFFSET);
+    oled.printf(F("%2d"), hour()+TZ_OFFSET < 0 ? 24+hour()+TZ_OFFSET : hour()+TZ_OFFSET);
     oled.setTextSize(1);
     oled.printf(second()%2 ? F(":") : F(" ")); // sneak in small colon
     oled.setTextSize(2);
@@ -573,9 +583,9 @@ void updateDisplayTask(){
     // bottom right small
     oled.setTextSize(1);
     oled.setCursor(rightLineX+3,rightDiv3Y+2);
-    oled.printf(F("%-4.1f  %4.0f"),(rtd.accel_pos-rtd.brake_pos),rtd.gear_pos);
+    oled.printf(F("%-4.1f  %4d"),(rtd.accel_pos-rtd.brake_pos),rtd.gear_pos);
     oled.setCursor(rightLineX+3+(12*6),rightDiv3Y+5);
-    oled.printf(F("   "));
+    oled.printf(F("%2.1f"),(float)km_traveled/(float)MI_TO_KM);
     oled.setCursor(rightLineX+3,rightDiv3Y+10);
     oled.printf(F(" Pdl  Gear"));
   
@@ -637,10 +647,10 @@ void updateDisplayTask(){
     oled.setCursor(11*6,0);
     oled.printf(F("%-3s"),gps.cardinal(gps.f_course()));
     oled.setCursor(10*6,7);
-    oled.printf(F("%4g\xA7"),gps.f_course());
+    oled.printf(F("%3d\xA7"),gps.course());
     // put number of sats to the left of the ext temp
     oled.setCursor(oled.width()-((2*12)+(8*6)),0);
-    oled.printf(F("%3.1f"), gps.satellites());
+    oled.printf(F("%3d"), gps.satellites());
     oled.setCursor(oled.width()-((2*12)+(9*6)),7);
     oled.printf(F("sats"));
   
