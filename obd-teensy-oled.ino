@@ -496,7 +496,7 @@ void serviceRADCANTask(){
           rad.det[index].is_super_res = mrr_pcan_mrr_detection_001_can_det_super_res_target_01_decode(temp.can_det_super_res_target_01);
           rad.det[index].is_clutter = mrr_pcan_mrr_detection_001_can_det_host_veh_clutter_01_decode(temp.can_det_host_veh_clutter_01);
 
-          rad.det[index].azimuth = mrr_pcan_mrr_detection_001_can_det_azimuth_01_decode(temp.can_det_azimuth_01) * 4068 / 71; // convert to deg
+          rad.det[index].azimuth = degrees(mrr_pcan_mrr_detection_001_can_det_azimuth_01_decode(temp.can_det_azimuth_01)); // convert to deg
           rad.det[index].range = mrr_pcan_mrr_detection_001_can_det_range_01_decode(temp.can_det_range_01);
           rad.det[index].rate = mrr_pcan_mrr_detection_001_can_det_range_rate_01_decode(temp.can_det_range_rate_01);
 
@@ -683,7 +683,7 @@ void updateDisplayTask(){
     else if(rtd.handbrake_sw){
       oled.setDrawColor(0);
       oled.printf(F(" PRK "));
-      oled.setDrawColor(0);
+      oled.setDrawColor(1);
     }
     else
       oled.printf(F(" ACC "));
@@ -761,7 +761,7 @@ void updateDisplayTask(){
     // Cruise text
     oled.setFont(smallFont);
     oled.setCursor(leftLineX+2,oled.getDisplayHeight()-(7*3+4));
-    oled.printf(F("%4.1f"), rtd.steering_angle); // SWA above cruise
+    oled.printf(F("%3.0f"), rtd.steering_angle); // SWA above cruise
     oled.setCursor(leftLineX+2,oled.getDisplayHeight()-(7*2+2));
     oled.setDrawColor(rtd.cruise_sw ? 0 : 1);
     oled.printf(F("Cru"));
@@ -784,7 +784,7 @@ void updateDisplayTask(){
     else if(rtd.speed_kph/MI_TO_KM >  5) distance_scale = 2*6;  //39 ft
     else if(rtd.speed_kph/MI_TO_KM >  2) distance_scale = 1*6;  //20 ft
     else distance_scale = 2;                                    //6.5 ft
-    int8_t swa_x = (rightLineX-x_ctr) * sin(rtd.steering_angle); // negative is left turn
+    int8_t swa_x = (rightLineX-x_ctr) * sin(radians(rtd.steering_angle)); // negative is left turn
     oled.drawLine(leftLineX,leftDiv1Y,x_ctr,oled.getDisplayHeight()+1); // left angle leg
     oled.drawLine(rightLineX,leftDiv1Y,x_ctr,oled.getDisplayHeight()+1); // right angle leg
     //oled.drawEllipse(x_ctr,leftDiv1Y,x_ctr-leftLineX,leftDiv1Y,U8G2_DRAW_UPPER_RIGHT|U8G2_DRAW_UPPER_LEFT); //semicircle
@@ -799,7 +799,7 @@ void updateDisplayTask(){
     for(uint8_t i=0;i<NUM_DETECTIONS;i++){
       // each detection we check valid, if valid and in range we plot. 
       if(rad.det[i].is_valid && rad.det[i].range < distance_scale){
-        int8_t det_x = (rightLineX-x_ctr) * sin(rad.det[i].azimuth);
+        int8_t det_x = (rightLineX-x_ctr) * sin(radians(rad.det[i].azimuth));
         uint8_t det_y = rad.det[i].range * oled.getDisplayHeight() / distance_scale;
         oled.drawPixel(x_ctr+det_x,oled.getDisplayHeight()+1-det_y);
       }
